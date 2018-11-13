@@ -1,0 +1,112 @@
+%% Homework 4 (question A) %%
+
+clc
+clear all 
+
+% set parameters 
+A = 0.1; %constant specified in homework 
+B = 1; %constant specified in homework 
+I = [1.0, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1];  
+xs = zeros(10,1);
+
+%for the additive equation of xi at equilibrium
+figure(1);
+for h = 1:10
+    i = I(h);
+    L = sum(I(I~=I(h)));
+    x = (((B.*i) - L) ./ (A));
+    xs(h) = x;
+end
+
+plot(1:10,xs,'LineWidth',2);
+
+%create figure 1 for additive xi
+title('Additive xi')
+ylabel('')
+xlabel('')
+
+%for the additive equation of Xi at equilibrium
+figure(2);
+for h = 1:10
+    i = I(h);
+    L = sum(I(I~=I(h))); % summation of all inhibitory terms without specific term 
+    x = (((B.*i) - L) ./ (A));
+    xs(h) = x;
+end
+
+xsnorm = xs / sum(xs);
+xn = (xsnorm);
+plot(1:10,xn,'LineWidth',2);
+
+%create figure 2 for shunting Xi
+title('Additive Xi')
+ylabel('')
+xlabel('')
+
+%for the shunting equation of xi at equilibrium
+figure(3);
+for h = 1:10
+    i = I(h);
+    L = sum(I(I~=I(h)));% summation of all inhibitory terms without specific term 
+    x = ((B .* i)./(A + L));
+    xs(h) = x;
+end
+
+plot(1:10,xs,'LineWidth',2);
+
+%create figure 3 for shunting xi
+title('Shunting xi')
+ylabel('')
+xlabel('')
+
+%for the shunting equation of Xi at equilibrium
+figure(4);
+for h = 1:10
+    i = I(h);
+    L = sum(I(I~=I(h))); % summation of all inhibitory terms without specific term 
+    x = ((B .* i)./(A + L)); 
+    xs(h) = x;
+end
+
+xsnorm = xs / sum(xs);
+xn = (xsnorm);
+plot(1:10,xn,'LineWidth',2);
+
+%create figure 4 for shunting Xi
+title('Shunting Xi')
+ylabel('')
+xlabel('')
+
+%part C new additive equation
+figure(5);
+for h = 1:10
+    i = I(h);
+    L = sum(I(I~=I(h)));% summation of all inhibitory terms without specific term 
+    x = (((B .*i) - L) ./ (A + i));
+    xs(h) = x;
+end
+
+plot(1:10,xs,'LineWidth',2);
+
+%create figure 5 for new part C additive equation
+title('New part C xi')
+ylabel('')
+xlabel('')
+
+%part C Normalized
+figure(6);
+for h = 1:10
+    i = I(h);
+    L = sum(I(I~=I(h))); % summation of all inhibitory terms without specific term 
+    x = (((B .*i) - L) ./ (A + i));
+    xs(h) = x;
+end
+
+xsnorm = xs / sum(xs);
+xn = (xsnorm);
+plot(1:10,xn,'LineWidth',2);
+
+%create figure 6 for part C normalized
+title('New part C Xi')
+ylabel('')
+xlabel('')

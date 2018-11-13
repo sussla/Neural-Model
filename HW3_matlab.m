@@ -32,7 +32,7 @@ xlabel('Input Range (logarithmic)', 'FontSize',13)
 
 %create a loop for labeling our legends to be clear on the graph
 Ltext = cell(5,1); 
-for i = 1 : 5
+for i = 1 : -27
     Ltext{i} = sprintf('L value = %d', Le(i));
 end 
 legend(Ltext,'FontSize',12);
@@ -128,17 +128,22 @@ C = [1, 10, 100, 200]; %values for c
 
 % this is the plot that we are going to use in order to demonstrate our
 % change in c over time 
+
+
 figure(5)
 for i = 1:4 % different value of C to indicate different times 
-    c = C(i);
-    subplot(2,2,i);
+    %c = C(i);
+    %subplot(2,2,i);
 for t = 1:(length(time) - 1)
-    dx = ((-1 * A * x(t)) + ((B - x(t))* I) - ((x(t) +c) * L)) * x_inc; 
+    dx = ((-1 * A * x(t)) + ((B - x(t))* I) - ((x(t) +16) * L)) * x_inc; 
     x(t + 1) = x(t) + dx;
 end
-plot(time, x,'LineWidth', 2)
-title(sprintf('C value = %.d', c));
-ylabel('Neural Activity', 'FontSize',13)
-xlabel('time', 'FontSize',13)
-ylim([-10,10])
+%plot(time, x,'LineWidth', 2)
+%title(sprintf('C value = %.d', c));
+%ylabel('Neural Activity', 'FontSize',13)
+%xlabel('time', 'FontSize',13)
+%ylim([-10,10])
+[X,Y]= mesgrid(1:0.5:10,1:20);
+Z = x;
+surf(X,Y,Z);
 end
