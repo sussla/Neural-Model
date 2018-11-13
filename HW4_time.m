@@ -1,4 +1,11 @@
 %% Time series version of question A %%
+<<<<<<< HEAD
+=======
+
+clc
+clear all 
+
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 % Additive equation of xi at equilibrium 
 
 % set parameters 
@@ -23,6 +30,7 @@ for h = 1:10
 end
 
 figure(7);
+<<<<<<< HEAD
 [TGrid, LGrid] = meshgrid(time, I);
 additive_plot = surf(TGrid, LGrid, x(:,1:end));
 shading interp
@@ -30,6 +38,15 @@ xlabel('Time')
 zlabel('Activity of neuron')
 ylabel('Input')
 set(gca, 'fontsize',13)
+=======
+Add_plot = surf(time, 1:10, x);
+Add_plot.FaceAlpha=0.8;
+Add_plot.LineStyle='none';
+xlabel('Time')
+zlabel('Activity')
+ylabel('Input')
+set(gca, 'fontsize',18)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 %% Shunting equation of Xi at equilibrium %%
 
 % set parameters 
@@ -53,6 +70,7 @@ for h = 1:10
 end
 
 figure(8);
+<<<<<<< HEAD
 [TGrid, LGrid] = meshgrid(time, I);
 shunting_plot = surf(TGrid, LGrid, x(:,1:end));
 shading interp
@@ -60,6 +78,15 @@ xlabel('Time')
 zlabel('Activity of neuron')
 ylabel('Input')
 set(gca, 'fontsize',13)
+=======
+Shunt_plot = surf(time, 1:10, x);
+Shunt_plot.FaceAlpha=0.8;
+Shunt_plot.LineStyle='none';
+xlabel('Time')
+zlabel('Activity')
+ylabel('Input')
+set(gca, 'fontsize',18)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 
 %% Part C shunting equation %%
 % set parameters 
@@ -83,6 +110,7 @@ for h = 1:10
 end
 
 figure(9);
+<<<<<<< HEAD
 [TGrid, LGrid] = meshgrid(time, I);
 second_shunting_plot = surf(TGrid, LGrid, x(:,1:end));
 shading interp
@@ -90,3 +118,13 @@ xlabel('Time')
 zlabel('Activity of neuron')
 ylabel('Input')
 set(gca, 'fontsize',13)
+=======
+PartC_plot = surf(time, 1:10, x);
+PartC_plot.FaceAlpha=0.8;
+PartC_plot.LineStyle='none';
+
+xlabel('Time')
+zlabel('Activity')
+ylabel('Input')
+set(gca, 'fontsize',18)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb

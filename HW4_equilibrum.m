@@ -18,12 +18,21 @@ for h = 1:10
     xs(h) = x;
 end
 
+<<<<<<< HEAD
 plot(1:10,xs,'LineWidth',2);
 
 %create figure 1 for additive xi
 title('Additive xi')
 ylabel('')
 xlabel('')
+=======
+plot(1:10,xs,'LineWidth',3);
+
+%create figure 1 for additive xi
+title('Actual xi Additive plot', 'FontSize',20)
+ylabel('STM activity', 'FontSize', 18)
+xlabel('Input pattern','FontSize', 18)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 
 %for the additive equation of Xi at equilibrium
 figure(2);
@@ -36,12 +45,20 @@ end
 
 xsnorm = xs / sum(xs);
 xn = (xsnorm);
+<<<<<<< HEAD
 plot(1:10,xn,'LineWidth',2);
 
 %create figure 2 for shunting Xi
 title('Additive Xi')
 ylabel('')
 xlabel('')
+=======
+plot(1:10,xn,'LineWidth',3);
+
+title('Normlaized Xi Additive plot', 'FontSize',20)
+ylabel('STM activity', 'FontSize', 18)
+xlabel('Input pattern','FontSize', 18)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 
 %for the shunting equation of xi at equilibrium
 figure(3);
@@ -52,12 +69,21 @@ for h = 1:10
     xs(h) = x;
 end
 
+<<<<<<< HEAD
 plot(1:10,xs,'LineWidth',2);
 
 %create figure 3 for shunting xi
 title('Shunting xi')
 ylabel('')
 xlabel('')
+=======
+plot(1:10,xs,'LineWidth',3);
+
+%create figure 3 for shunting xi
+title('Actual xi Shunting plot', 'FontSize',20)
+ylabel('STM activity', 'FontSize', 18)
+xlabel('Input pattern','FontSize', 18)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 
 %for the shunting equation of Xi at equilibrium
 figure(4);
@@ -70,12 +96,21 @@ end
 
 xsnorm = xs / sum(xs);
 xn = (xsnorm);
+<<<<<<< HEAD
 plot(1:10,xn,'LineWidth',2);
 
 %create figure 4 for shunting Xi
 title('Shunting Xi')
 ylabel('')
 xlabel('')
+=======
+plot(1:10,xn,'LineWidth',3);
+
+%create figure 4 for shunting Xi
+title('Normalized Xi Shunting plot', 'FontSize',20)
+ylabel('STM activity', 'FontSize', 18)
+xlabel('Input pattern','FontSize', 18)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 
 %part C new additive equation
 figure(5);
@@ -86,12 +121,21 @@ for h = 1:10
     xs(h) = x;
 end
 
+<<<<<<< HEAD
 plot(1:10,xs,'LineWidth',2);
 
 %create figure 5 for new part C additive equation
 title('New part C xi')
 ylabel('')
 xlabel('')
+=======
+plot(1:10,xs,'LineWidth',3);
+
+%create figure 5 for new part C additive equation
+title('Actual xi Additive plot - Eq3', 'FontSize',20)
+ylabel('STM activity', 'FontSize', 18)
+xlabel('Input pattern','FontSize', 18)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 
 %part C Normalized
 figure(6);
@@ -104,9 +148,18 @@ end
 
 xsnorm = xs / sum(xs);
 xn = (xsnorm);
+<<<<<<< HEAD
 plot(1:10,xn,'LineWidth',2);
 
 %create figure 6 for part C normalized
 title('New part C Xi')
 ylabel('')
 xlabel('')
+=======
+plot(1:10,xn,'LineWidth',3);
+
+%create figure 6 for part C normalized
+title('Normalized Additive plot - Eq3', 'FontSize',20)
+ylabel('STM activity', 'FontSize', 18)
+xlabel('Input pattern','FontSize', 18)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb

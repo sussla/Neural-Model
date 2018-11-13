@@ -1,11 +1,21 @@
 % Question D of the distance-dependent receptive field %
 
+<<<<<<< HEAD
+=======
+clc
+clear all 
+
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 % set parameters 
 A = 0.1; %constant specified in homework 
 B = 1; %constant specified in homework 
 x_start = 0; % begin with an x value of 0, x(0) = 0 
 x_inc = .001; % increments that I want to count by
+<<<<<<< HEAD
 x_end = 3; % final x value  
+=======
+x_end = 10; % final x value  
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 time = x_start:x_inc:x_end;
 dx = 0;
 IA = [0.1, 0.1, 0.1, 0.1, 0.1, 0.8, 0.8, 0.8, 0.8, 0.8];
@@ -15,8 +25,23 @@ ID = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0];
 CKI = exp((-(-4:4).^2)./4);
 EKI = (0.5 .* exp(((-(-4:4).^2))./16));
 
+<<<<<<< HEAD
 %plot(CKI);
 %plot(EKI);
+=======
+figure(80);
+plot(CKI, 'Linewidth',3);
+title('CKI', 'FontSize',20)
+ylabel('', 'FontSize', 18)
+xlabel('','FontSize', 18)
+
+
+figure(82);
+plot(EKI, 'Linewidth',3);
+title('EKI', 'FontSize',20)
+ylabel('', 'FontSize', 18)
+xlabel('','FontSize', 18)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 
 
 %working on IA input 
@@ -41,6 +66,7 @@ end
 
 
 figure(10);
+<<<<<<< HEAD
 [TGrid, LGrid] = meshgrid(time, IA);
 IA_plot = surf(TGrid, LGrid, x(:,1:end));
 shading interp
@@ -48,6 +74,16 @@ xlabel('Time')
 zlabel('Activity of neuron')
 ylabel('Input')
 set(gca, 'fontsize',13)
+=======
+IA_plot = surf(time, 1:10, x);
+IA_plot.FaceAlpha=0.8;
+IA_plot.LineStyle='none';
+xlabel('Time')
+zlabel('Activity')
+ylabel('Input')
+set(gca, 'fontsize',13)
+title('Input A', 'FontSize',20)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 
 %working on IB input 
 
@@ -71,6 +107,7 @@ for h = 1:10
 end 
 
 figure(11);
+<<<<<<< HEAD
 [TGrid, LGrid] = meshgrid(time, IB);
 IA_plot = surf(TGrid, LGrid, x(:,1:end));
 shading interp
@@ -78,6 +115,16 @@ xlabel('Time')
 zlabel('Activity of neuron')
 ylabel('Input')
 set(gca, 'fontsize',13)
+=======
+IB_plot = surf(time, 1:10, x);
+IB_plot.FaceAlpha=0.8;
+IB_plot.LineStyle='none';
+xlabel('Time')
+zlabel('Activity')
+ylabel('Input')
+set(gca, 'fontsize',13)
+title('Input B', 'FontSize',20)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 
 %working on IC input
 x = zeros(length(IC), length(time));
@@ -100,6 +147,7 @@ for h = 1:10
 end 
 
 figure(12);
+<<<<<<< HEAD
 [TGrid, LGrid] = meshgrid(time, IC);
 IA_plot = surf(TGrid, LGrid, x(:,1:end));
 shading interp
@@ -107,6 +155,16 @@ xlabel('Time')
 zlabel('Activity of neuron')
 ylabel('Input')
 set(gca, 'fontsize',13)
+=======
+IC_plot = surf(time, 1:10, x);
+IC_plot.FaceAlpha=0.8;
+IC_plot.LineStyle='none';
+xlabel('Time')
+zlabel('Activity')
+ylabel('Input')
+set(gca, 'fontsize',13)
+title('Input C', 'FontSize',20)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
 
 %working on ID input
 x = zeros(length(ID), length(time));
@@ -129,6 +187,7 @@ for h = 1:10
 end 
 
 figure(13);
+<<<<<<< HEAD
 [TGrid, LGrid] = meshgrid(time, ID);
 IA_plot = surf(TGrid, LGrid, x(:,1:end));
 shading interp
@@ -136,3 +195,13 @@ xlabel('Time')
 zlabel('Activity of neuron')
 ylabel('Input')
 set(gca, 'fontsize',13)
+=======
+ID_plot = surf(time, 1:10, x);
+ID_plot.FaceAlpha=0.8;
+ID_plot.LineStyle='none';
+xlabel('Time')
+zlabel('Activity')
+ylabel('Input')
+set(gca, 'fontsize',13)
+title('Input D', 'FontSize',20)
+>>>>>>> 8007dd1460bfc9f6b6f7603a39e42237724435cb
